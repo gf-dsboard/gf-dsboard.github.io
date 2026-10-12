@@ -5,15 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><!-- 검색 노출 금지 -->
 <title>지파운데이션 현황판 모음</title>
+<link rel="icon" href="favicon.png">
 <script>
-  // 포털 원본 주소 (Apps Script 배포 관리의 웹 앱 URL)
+  // 포털 원본 주소 (Apps Script → 배포 관리의 웹 앱 URL). 주소가 바뀌면 이 한 줄만 고치면 돼요.
   var PORTAL = 'https://script.google.com/macros/s/AKfycbzsG1C32ggbK45g61oYbpxfbkKsatg8BPuiTjQQq3UNLMhetPfTIiaUraAY2GKq4YrB/exec';
   // 주소 뒤에 붙은 값(?go=짧은이름 등)은 그대로 포털에 전달
   location.replace(PORTAL + location.search);
 </script>
-<noscript>
-  <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbzsG1C32ggbK45g61oYbpxfbkKsatg8BPuiTjQQq3UNLMhetPfTIiaUraAY2GKq4YrB/exec">
-</noscript>
 <style>
   body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
        font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
@@ -23,6 +21,7 @@
 </head>
 <body>
   <p>현황판 모음으로 이동 중이에요…</p>
-  <p><a href="https://script.google.com/macros/s/AKfycbzsG1C32ggbK45g61oYbpxfbkKsatg8BPuiTjQQq3UNLMhetPfTIiaUraAY2GKq4YrB/exec">자동으로 넘어가지 않으면 여기를 눌러주세요</a></p>
+  <p><a id="go">자동으로 넘어가지 않으면 여기를 눌러주세요</a></p>
+  <script>document.getElementById('go').href = PORTAL + location.search;</script>
 </body>
 </html>
